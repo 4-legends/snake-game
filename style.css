@@ -1,0 +1,102 @@
+:root {
+  --grey: #3e3737;
+  --white: #fff;
+  --border: #595f43;
+  --game-border-2: #abb78a;
+  --game-border-3: #8b966c;
+  --text: #333;
+  --highScore: #b0e127;
+  --background-game3: #c4cfa3;
+  --snake: #5a5a5a;
+  --food: #dedede;
+  --food-border: #999;
+  --score: #73c179;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "VT323", monospace;
+  height: 100vh;
+  margin: 0;
+}
+
+body,
+.snakeGame {
+  background-color: var(--grey);
+}
+
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(20, 20px);
+  grid-template-rows: repeat(20, 20px);
+  border-radius: 100px;
+  margin: 5px;
+}
+
+.game-border-1 {
+  border: var(--border) solid 10px;
+  border-radius: 26px;
+  box-shadow: inset 0 0 0 10px var(--border);
+}
+
+.game-border-2 {
+  border: var(--game-border-2) solid 8px;
+  border-radius: 26px;
+  box-shadow: inset 0 0 0 10px var(--game-border-2);
+}
+
+.game-border-3 {
+  border: var(--game-border-3) solid 30px;
+  border-radius: 20px;
+  box-shadow: inset 0 0 0 10px var(--game-border-3);
+  background-color: var(--background-game3);
+}
+
+#instructions-text {
+  position: absolute;
+  top: 60%;
+  color: var(--text);
+  width: 350px;
+  text-align: center;
+  text-transform: capitalize;
+  padding: 30px;
+  margin: 0;
+}
+
+.scores {
+  display: flex;
+  justify-content: space-between;
+  color: var(--score);
+}
+
+#score,
+#highScore {
+  font-size: 2.5 rem;
+  font-weight: bolder;
+  margin: 10px 0;
+}
+
+#highScore {
+  color: var(--highScore);
+  display: none;
+}
+
+.snake {
+  background-color: var(--snake);
+  border: var(--snake) 1px dotted;
+}
+
+.food {
+  background-color: var(--food);
+  border: var(--food-border) 5px solid;
+}
+
+#logo {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: var(--background-game3);
+}
